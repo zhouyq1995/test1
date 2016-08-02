@@ -1,0 +1,165 @@
+@charset "utf-8";
+/* CSS Document */
+body,div,ul,li,img,a,span,i,h1,h2,h3,h4,p1,p2,p3,p4,p5,dl,dt,dd,p{ margin:0; padding:0;}
+body{font-family:"微软雅黑"; background:#000;  min-width:1260px;}
+.clearfix{ *zoom:1;}
+.clearfix:after{ content:"."; display:block; height:0; visibility:hidden; clear:both;}
+a{ text-decoration:none;}
+li{ list-style:none;}
+area{ outline:none;}
+
+/*第一部分*/
+#no1{ height:450px; width:100%; min-width:1260px;  background:url(../images/no01_back.png) repeat-x; position:relative; padding-top:500px;}
+/*第一部分 小太阳*/
+.sunny { 
+	animation: sunny 15s linear infinite;
+	background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
+	height: 350px;
+	width: 40px; 
+	margin-left: -40px;
+	position: absolute;
+	left:50%;  
+	top: 110px;
+}
+.sunny:before {
+	background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
+	content: ''; 
+	height: 350px; 
+	width: 40px;
+	opacity: 1; 
+	position: absolute;
+	bottom: 0px;
+	left: 0px; 
+	-webkit-transform: rotate(90deg); 
+	-ms-transform: rotate(90deg); 
+	transform: rotate(90deg);
+}	
+@-webkit-keyframes sunny { 
+0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@keyframes sunny { 
+0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+/*第一部分 字体部分*/
+#no1 .main1{height:400px; width:100%; margin:50px auto 0; color:#FFF; font-size:20px; text-align:center; background:#000; }
+#no1 p{ display: inline-block; font-size:35px; position:absolute; color: rgba(255, 218, 49, 0.5); top:610px; left:50%; margin-left:-450px; line-height:50px; text-align:center;}
+/*第一部分 光效li部分*/
+.live span {
+  list-style: none;
+  position: relative;
+  margin: 0 0 .5em 0;
+  -webkit-transition: .12s;
+          transition: .12s;
+}
+.live span:hover { color:#FC0;}
+.live li {
+  list-style: none;
+  position: relative;
+  padding: 0 0 0 2em;
+  margin: 0 0 .5em 10px;
+  -webkit-transition: .12s;
+          transition: .12s;
+}
+.live li::before { 
+  position: absolute;
+  content: '\2022';
+  font-family: Arial;
+  color: #FFF;
+  top: 0;
+  left: 0;
+  text-align: center;
+  font-size: 2em;
+  opacity: .5;
+  line-height: .75;
+  -webkit-transition: .5s;
+          transition: .5s;
+}
+.live li:hover { color: #FFF;}
+.live li:hover::before {
+  -webkit-transform: scale(2);
+      -ms-transform: scale(2);
+          transform: scale(2);
+  opacity: 1;
+  text-shadow: 0 0 4px;
+  -webkit-transition: .1s;
+          transition: .1s;
+}
+#no1 .main1 ul {
+  width: 550px;
+  display: inline-block;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.5);
+  position:absolute;
+  left:50%;
+  margin:60px 0 0 10px;
+}
+/*第一部分结束*/
+
+
+
+/*第二部分*/
+#no2{ height:950px; width:100%; min-width:1260px; background:#cedfde; position:relative;}
+/*第二部分 机器人*/
+.robot01{
+	width:195px;
+	height:300px;
+	margin:100px 0 0 -100px;
+	position:absolute;
+	top:200px;
+	left:50%;
+	animation:robotUpdown 1s infinite alternate;
+	-webkit-animation:robotUpdown 1s infinite alternate;
+}
+.robotBody01{
+	width:195px;
+	height:335px;
+	background:url(../images/no01_rob_blue.png) no-repeat;
+	position:relative;
+}
+.robot02{
+	width:208px;
+	height:326px;
+	margin:100px 0 0 300px;
+	position:absolute;
+	top:350px;
+	left:50%;
+	animation:robotUpdown 1s infinite alternate;
+	-webkit-animation:robotUpdown 1s infinite alternate;
+}
+.robotBody02{
+	width:208px;
+	height:326px;
+	background:url(../images/no01_rob_red.png) no-repeat;
+	position:relative;
+}
+.shadow-robot{
+	width:120px;
+	height:10px;
+	border-radius:100%;
+	background:#061E74;
+	opacity:0.3;
+	margin:0 auto;
+	animation:shadow-robot 1s infinite alternate;
+	-webkit-animation:shadow-robot 1s infinite alternate;
+}
+@keyframes robotUpdown{
+	from{margin-top:100px;}
+	to{margin-top:70px;}
+}
+@-webkit-keyframes robotUpdown{
+	from{margin-top:100px;}
+	to{margin-top:70px;}
+}
+@keyframes shadow-robot{
+	from{margin-top:30px;opacity:0.3;}
+	to{margin-top:60px;opacity:0.1;}
+}
+@-webkit-keyframes shadow-robot{
+	from{margin-top:30px;opacity:0.3;}
+	to{margin-top:60px;opacity:0.1;}
+}
+#no3{ height:950px; width:100%; min-width:1260px; background:#FFF; position:relative;}
+
+
